@@ -71,6 +71,7 @@ const Right = styled.div`
 
 const ContactItem = styled.div`
   display: flex;
+  gap: 10px;
   align-items: center;
   margin-bottom: 20px;
 `;
