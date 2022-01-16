@@ -8,6 +8,7 @@ import {
   Phone,
   Mail,
 } from "@material-ui/icons";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 const Container = styled.div`
   display: flex;
