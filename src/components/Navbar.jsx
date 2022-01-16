@@ -75,14 +75,7 @@ export default function Navbar() {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo
-            as={motion.h1}
-            initial={{ scale: 0.2 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Mart.
-          </Logo>
+          <Logo>Mart.</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
