@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { sliderItems } from "../data";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -96,9 +97,30 @@ const Slider = () => {
               <Image src={item.img} />
             </ImgContainer>
             <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>SHOP NOW</Button>
+              <Title
+                as={motion.h1}
+                initial={{ x: "100vw", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                {item.title}
+              </Title>
+              <Desc
+                as={motion.p}
+                initial={{ x: "100vw", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                {item.desc}
+              </Desc>
+              <Button
+                as={motion.button}
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
+                SHOP NOW
+              </Button>
             </InfoContainer>
           </Slide>
         ))}
