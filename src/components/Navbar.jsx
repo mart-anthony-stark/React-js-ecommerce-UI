@@ -1,6 +1,7 @@
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 import styled from "styled-components/dist/styled-components.js";
+import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 
 const Container = styled.div`
   height: 60px;
@@ -74,7 +75,9 @@ export default function Navbar() {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Mart.</Logo>
+          <Logo as={motion.h1} initial={{ scale: 0.8 }} animate={{ scale: 1 }}>
+            Mart.
+          </Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
