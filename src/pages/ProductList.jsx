@@ -8,7 +8,6 @@ import { mobile } from "../responsive";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 
-
 const Container = styled.div``;
 const Title = styled.h1`
   padding: 20px;
@@ -73,12 +72,13 @@ const ProductList = () => {
             <Option disabled selected>
               Color
             </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
+            <Option>white</Option>
+            <Option>black</Option>
+            <Option>red</Option>
+            <Option>blue</Option>
+            <Option>yellow</Option>
+            <Option>green</Option>
+            <Option>pink</Option>
           </Select>
           <Select name="size" onChange={handleFilters}>
             <Option disabled selected>
