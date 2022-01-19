@@ -60,9 +60,13 @@ const Products = ({ cat, sort, filters }) => {
 
   return (
     <Container>
-      {filteredProducts.map((product) => (
-        <Product item={product} key={product.id} />
-      ))}
+      {cat
+        ? filteredProducts.map((product) => (
+            <Product item={product} key={product._id} />
+          ))
+        : products.map((product) => (
+            <Product item={product} key={product._id} />
+          ))}
     </Container>
   );
 };
