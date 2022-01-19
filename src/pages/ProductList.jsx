@@ -8,6 +8,7 @@ import { mobile } from "../responsive";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 
+
 const Container = styled.div``;
 const Title = styled.h1`
   padding: 20px;
@@ -60,7 +61,6 @@ const ProductList = () => {
     });
   };
 
-  console.log({ filters, category, sort });
   return (
     <Container>
       <Navbar />
