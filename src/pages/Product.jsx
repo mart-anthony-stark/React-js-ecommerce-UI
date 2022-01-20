@@ -149,8 +149,10 @@ const Product = () => {
     // Update cart
     dispatch(
       addProduct({
-        product,
+        ...product,
         quantity,
+        color,
+        size,
       })
     );
   };
