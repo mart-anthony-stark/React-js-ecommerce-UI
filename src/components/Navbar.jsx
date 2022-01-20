@@ -3,6 +3,7 @@ import { Badge } from "@material-ui/core";
 import styled from "styled-components/dist/styled-components.js";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
   height: 60px;
@@ -89,6 +90,8 @@ const MenuItem = styled.div`
 `;
 
 export default function Navbar() {
+  const quantity = useSelector((state) => state.cart.quantity);
+  console.log(quantity);
   return (
     <Container>
       <Wrapper>
@@ -106,7 +109,7 @@ export default function Navbar() {
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGNIN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
