@@ -7,6 +7,7 @@ import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -123,13 +124,15 @@ const Product = () => {
 
   useEffect(() => {
     const getProduct = async () => {
-      const res = await fetch(`http://localhost:5000/api/products/find/${id}`);
-      const data = await res.json();
-      setProduct(data);
-      console.log(data);
+      try {
+        const res = await publicRequest.get(`/products/find/${id}`);
+        setProduct(res.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getProduct();
-  }, []);
+  }, [id]);
   return (
     <Container>
       <Navbar />
