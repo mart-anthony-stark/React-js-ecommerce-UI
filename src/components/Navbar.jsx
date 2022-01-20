@@ -4,6 +4,7 @@ import styled from "styled-components/dist/styled-components.js";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -107,11 +108,13 @@ export default function Navbar() {
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGNIN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          <Link to="/cart" style={{ color: "black" }}>
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
