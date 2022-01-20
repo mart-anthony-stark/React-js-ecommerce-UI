@@ -60,6 +60,7 @@ const Icon = styled.div`
   justify-content: center;
   margin: 10px;
   transition: 0.5s ease;
+  color: black;
 
   &:hover {
     background: #e9f5f5;
