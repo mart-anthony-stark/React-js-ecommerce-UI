@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
+import StripeCheckout from 'react-stripe-checkout'
 
 const Container = styled.div``;
 const Wrapper = styled.div`
